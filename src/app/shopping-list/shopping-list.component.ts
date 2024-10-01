@@ -20,11 +20,12 @@ export class ShoppingListComponent implements OnInit {
 
   }
 
-  get Apples(){
-    return "89";
+  onIngredientAdded(ingredient: Ingredient){
+    this.ingredients.push(ingredient);
   }
 
-  get Tomatoes(){
-    return "gh";
+  clearBasket(){
+    this.ingredients.length = 0;
   }
+
 }
