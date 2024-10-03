@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ignoreElements } from 'rxjs';
 import { Ingredient } from 'src/shared/ingredients.model';
 import { ShoppingListService } from './shopping-list.service';
 
