@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class AuthComponent {
   isLoginMode = true;
+
   isLoading = false;
+
   error: string = null;
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -39,13 +41,11 @@ export class AuthComponent {
 
     authObs.subscribe(
         (resData) => {
-          console.log(resData);
           this.isLoading = false;
           this.router.navigate(['/recipes']);
           this.error = null;
         },
         (errorMessage) => {
-          console.log(errorMessage);
           this.error = errorMessage;
           this.isLoading = false;
         }
