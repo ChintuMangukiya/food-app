@@ -1,3 +1,43 @@
 .active{
     background-color: rgb(107, 34, 0) !important;
+    color: white !important;
+
+    .mt-5{
+        color: rgb(255, 255, 255) !important;
+    }
+    
+    .mb-5{
+        margin-bottom: 10px;
+        margin-left: 20px;
+        color: rgb(255, 255, 255) !important;
+    }
+
+    .recipe-img{
+        border: 2px solid rgb(255, 255, 255) !important;
+    }
+}
+
+
+.pulli{
+    height: 100px;
+    width: 400px;
+    border: 2px solid rgb(212, 177, 132) !important;
+    border-radius: 100px;
+}
+
+.mt-5{
+    margin-top: 15px;
+    margin-left: 20px;
+    color: rgb(71, 23, 0) !important;
+}
+
+.mb-5{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    color: rgb(107, 34, 0) !important;
+}
+
+#recipe-img{
+    margin-top: 7px;
+    margin-left: 100px !important;
 }
