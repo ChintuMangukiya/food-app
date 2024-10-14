@@ -1,25 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthResponseData, AuthService } from './auth.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { AlertComponent } from 'src/shared/alert/alert.component';
+import { PlaceholderDirective } from 'src/shared/placeholder/placeholder.directive';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
 })
-export class AuthComponent {
+export class AuthComponent  {
   isLoginMode = true;
 
   isLoading = false;
 
   error: string = null;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  @ViewChild(PlaceholderDirective) alertHost: PlaceholderDirective;
+
+  constructor(private authService: AuthService, private router: Router, private componentFactoryResolver: ComponentFactoryResolver) {}
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
   }
+
 
   onSubmit(authForm: NgForm) {
     if (!authForm.valid) {
@@ -47,10 +52,33 @@ export class AuthComponent {
         },
         (errorMessage) => {
           this.error = errorMessage;
+          this.showErrorAlert(errorMessage);
           this.isLoading = false;
         }
       );
 
     authForm.reset();
+  }
+
+
+
+  onHandleError(){
+    this.error = null;
+  }
+
+  private showErrorAlert(errorMessage: string){
+
+    // const alertCmp = new AlertComponent(); // This is not the way
+
+    const alertcmpFactory = this.componentFactoryResolver.resolveComponentFactory(
+      AlertComponent
+    );
+
+    const hostViewContainerRef = this.alertHost.viewcontainerRef;
+
+    hostViewContainerRef.clear();
+
+    hostViewContainerRef.createComponent(alertcmpFactory);
+
   }
 }

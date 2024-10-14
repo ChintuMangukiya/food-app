@@ -74,4 +74,9 @@ export class RecipeService{
          this.recipes.splice(index,1);
          this.recipesChanged.next(this.recipes.slice());
       }
+
+      clearBasket(){
+         this.recipes.length = 0;
+         this,this.recipesChanged.next(this.recipes.slice());
+      }
 }

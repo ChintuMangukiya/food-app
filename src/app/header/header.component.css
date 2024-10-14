@@ -1,0 +1,7 @@
+a{
+    color: rgba(107, 34, 0, 0.678) !important;
+}
+
+ul>li:active, .active{
+    background-color: rgba(219, 179, 179, 0.911) !important;
+}
