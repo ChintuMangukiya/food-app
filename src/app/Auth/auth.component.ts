@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, OnDestroy, ViewChild } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthResponseData, AuthService } from './auth.service';
 import { Observable, Subscription } from 'rxjs';
@@ -11,12 +11,16 @@ import { PlaceholderDirective } from 'src/app/shared/placeholder/placeholder.dir
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
-export class AuthComponent implements OnDestroy{
+export class AuthComponent implements OnInit,OnDestroy{
   isLoginMode = true;
 
   isLoading = false;
 
   error: string = null;
+
+  email: string;
+
+  password: string;
 
   @ViewChild(PlaceholderDirective) alertHost: PlaceholderDirective;
 
@@ -26,6 +30,9 @@ export class AuthComponent implements OnDestroy{
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
+  }
+
+  ngOnInit(): void {
   }
 
 

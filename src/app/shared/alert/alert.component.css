@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
 
-    background: rgba(43, 22, 0, 0.753);
+    background: rgba(43, 22, 0, 0.589);
 
     z-index: 50;
 }
@@ -18,8 +18,8 @@
     width: 60vw;
     padding: 16px;
     z-index: 100;
-    background-color: rgb(255, 243, 228);
-    box-shadow: 0 2px 8px rgb(255, 250, 244);
+    border-radius: 10px;
+    background-color: rgb(255, 248, 239);
 }
 
 .alert-box-actions{
@@ -29,4 +29,5 @@
 .btn{
     background-color: rgb(97, 39, 0) !important;
     color: white !important;
+    border-radius: 5px;
 }

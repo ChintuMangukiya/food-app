@@ -20,3 +20,8 @@ input,input:-webkit-autofill{
     background-color: rgb(255, 241, 231) !important;
     -webkit-text-fill-color: rgb(201, 116, 47); /* Surcharge la font color d'autofill */
 }
+
+input:focus, input:focus-within, input:focus-visible{
+    box-shadow: 0 0 5px rgb(224, 146, 72);
+    background-color: rgb(255, 241, 231) !important;
+}
