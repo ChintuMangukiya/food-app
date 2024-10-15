@@ -1,0 +1,22 @@
+*{
+    color: rgb(100, 53, 0);
+}
+
+input{
+    color: rgb(165, 100, 26) !important;
+}
+
+button{
+    color: white !important;
+    background-color: rgb(107, 34, 0) !important;
+}
+
+button:active{
+    background-color: rgb(165, 100, 26) !important;
+}
+
+input,input:-webkit-autofill{
+    border: 1px solid rgb(201, 116, 47) !important;
+    background-color: rgb(255, 241, 231) !important;
+    -webkit-text-fill-color: rgb(201, 116, 47); /* Surcharge la font color d'autofill */
+}

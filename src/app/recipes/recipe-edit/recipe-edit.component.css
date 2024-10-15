@@ -17,3 +17,22 @@ input,textarea{
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
+.img-preview{
+    height: 300px;
+    width: 300px;
+    object-fit:fill;
+
+    border: 2px solid brown;
+    border-radius: 30px;
+}
+
+input:focus, textarea:focus{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-shadow: 0 0 5px rgb(224, 146, 72);
+    border: 1px solid rgb(199, 139, 83);
+}

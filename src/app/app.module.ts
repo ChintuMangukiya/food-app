@@ -37,8 +37,8 @@ import { PlaceholderDirective } from 'src/shared/placeholder/placeholder.directi
     RecipeEditComponent,
     AuthComponent,
     LoadingSpinnerComponent,
-    AlertComponent,
-    PlaceholderDirective
+    PlaceholderDirective,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
