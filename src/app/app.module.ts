@@ -9,7 +9,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DropdownDirective } from 'src/shared/dropdown.directive';
+import { DropdownDirective } from 'src/app/shared/dropdown.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
@@ -17,10 +17,10 @@ import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './Auth/auth.component';
-import { LoadingSpinnerComponent } from 'src/shared/Loading-Spinner/loading-spinner.component';
+import { LoadingSpinnerComponent } from 'src/app/shared/Loading-Spinner/loading-spinner.component';
 import { AuthInterceptorService } from './Auth/auth-interceptor.service';
-import { AlertComponent } from 'src/shared/alert/alert.component';
-import { PlaceholderDirective } from 'src/shared/placeholder/placeholder.directive';
+import { AlertComponent } from 'src/app/shared/alert/alert.component';
+import { PlaceholderDirective } from 'src/app/shared/placeholder/placeholder.directive';
 
 @NgModule({
   declarations: [
